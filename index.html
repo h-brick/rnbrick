@@ -1,111 +1,97 @@
 
-React native 환경설정
+<!DOCTYPE html><html lang=""><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>React Native · A framework for building native apps using React</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="A framework for building native apps using React"/><meta property="og:title" content="React Native · A framework for building native apps using React"/><meta property="og:type" content="website"/><meta property="og:url" content="https://facebook.github.io/react-native/"/><meta property="og:description" content="A framework for building native apps using React"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/react-native/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://facebook.github.io/react-native/blog/atom.xml" title="React Native Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://facebook.github.io/react-native/blog/feed.xml" title="React Native Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	0.	Homebrew 설치  (MacOS 만 설치 가능)
-      - https://brew.sh/index_ko
+              ga('create', 'UA-41298772-2', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://snack.expo.io/embed.js"></script><script type="text/javascript" src="/react-native/js/codeblocks.js"></script><link rel="stylesheet" href="/react-native/css/prism.css"/><link rel="stylesheet" href="/react-native/css/main.css"/><script src="/react-native/js/codetabs.js"></script></head><body><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/react-native/"><img class="logo" src="/react-native/img/header_logo.png" alt="React Native"/><h2 class="headerTitleWithLogo">React Native</h2></a><a href="/react-native/versions"><h3>0.59</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/react-native/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="/react-native/help" target="_self">Community</a></li><li class=""><a href="/react-native/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://github.com/facebook/react-native" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="pageContainer"><div class="hero"><div class="text">React Native</div><div class="minitext">Build native mobile apps using JavaScript and React</div><div class="buttons-unit"><div><a class="big-button" href="/react-native/docs/getting-started" target="_self">Get Started</a><a class="big-button" href="/react-native/docs/tutorial" target="_self">Learn the Basics</a></div></div></div><div><div class="container"><div class="wrapper"><div class="blockElement"><div class="blockContent"><h2>Build native mobile apps using JavaScript and React</h2><div><span><p>React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI using declarative components.</p>
+</span></div></div><div><span><pre><code class="hljs css language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Text<span class="token punctuation">,</span> View<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
 
+<span class="token keyword">class</span> <span class="token class-name">HelloReactNative</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>View<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Text<span class="token operator">></span>
+          If you like React<span class="token punctuation">,</span> you'll also like React Native<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Text<span class="token operator">></span>
+          Instead <span class="token keyword">of</span> <span class="token string">'div'</span> and <span class="token string">'span'</span><span class="token punctuation">,</span> you'll use native components
+          like <span class="token string">'View'</span> and <span class="token string">'Text'</span><span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</span></div></div></div></div><div class="container"><div class="wrapper"><div class="blockElement"><div class="blockContent"><h2>A React Native app is a real mobile app</h2><div><span><p>The apps you are building with React Native aren't mobile web apps because React Native uses the same fundamental UI building blocks as regular iOS and Android apps. Instead of using Swift, Kotlin or Java, you are putting those building blocks together using JavaScript and React.</p>
+</span></div></div><div><span><pre><code class="hljs css language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Image<span class="token punctuation">,</span> ScrollView<span class="token punctuation">,</span> Text<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
 
-	0.	Xcode 설치 (MacOS 만 설치 가능)
-     - AppStore Xcode 설치
+<span class="token keyword">class</span> <span class="token class-name">ScrollingImageWithText</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ScrollView<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Image
+          source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>uri<span class="token punctuation">:</span> <span class="token string">'https://facebook.github.io/react-native/img/header_logo.png'</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+          style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>width<span class="token punctuation">:</span> <span class="token number">66</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">58</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Text<span class="token operator">></span>
+          On iOS<span class="token punctuation">,</span> a React Native ScrollView uses a native UIScrollView<span class="token punctuation">.</span>
+          On Android<span class="token punctuation">,</span> it uses a native ScrollView<span class="token punctuation">.</span>
 
+          On iOS<span class="token punctuation">,</span> a React Native Image uses a native UIImageView<span class="token punctuation">.</span>
+          On Android<span class="token punctuation">,</span> it uses a native ImageView<span class="token punctuation">.</span>
 
-	0.	Java JDK8 설치 (Oracle 계정 필요)
-     3.1 download URL : https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-     3.2 본인 PC OS에 맞는 버전 설치 할 것
-     3.3 MacOS brew 설치 방법 (https://jojoldu.tistory.com/329)
-       3.3.1 Homebrew 최신 업데이트(터미널 사용)
-         - brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-       3.3.2 Java 최신버전 brew를 통해 설치 (터미널 사용)
-         - brew cask info java
-         - brew cask install java
-       3.3.3 Java의 버전을 관리해주는 jenv 패키지 설치 (터미널 사용)
-         - brew install jenv
-       3.3.4 .bash_profile에 코드를 추가하여 jenv 초기화 (터미널 사용)
-         - 계정 홈 디렉토리에서 실행 -> vi $HOME/.bash_profile
-         - 코드추가 : if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-         - 저장 -> :wq
-          - 프로파일 실행 -> source $HOME/.bash_profile  
+          React Native wraps the fundamental native components<span class="token punctuation">,</span> giving you
+          the performance <span class="token keyword">of</span> a native app using the APIs <span class="token keyword">of</span> React<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ScrollView<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</span></div></div></div></div><div class="container"><div class="wrapper"><div class="blockElement"><div class="blockContent"><h2>Don&#x27;t waste time recompiling</h2><div><div><span><p>React Native lets you build your app faster. Instead of recompiling, you can reload your app instantly. With <a href="http://facebook.github.io/react-native/blog/2016/03/24/introducing-hot-reloading">Hot Reloading</a>, you can even run new code while retaining your application state. Give it a try - it's a magical experience.</p>
+</span></div></div></div><img src="https://media.giphy.com/media/13WZniThXy0hSE/giphy.gif" alt="Hot Reloading Demonstration"/></div></div></div><div class="container"><div class="wrapper"><div class="blockElement"><div class="blockContent"><h2>Use native code when you need to</h2><div><div><span><p>React Native combines smoothly with components written in Swift, Java, or Objective-C. It's simple to drop down to native code if you need to optimize a few aspects of your application. It's also easy to build part of your app in React Native, and part of your app using native code directly - that's how the Facebook app works.</p>
+</span></div></div></div><div><span><pre><code class="hljs css language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Text<span class="token punctuation">,</span> View<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>MapViewComponent<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./your-native-map-implementation'</span><span class="token punctuation">;</span>
 
-       3.3.5 Java8 설치 (터미널 사용)
-         - brew tap cask room/versions
-         - brew cask install java8
-         - java 설치 디렉토리 확인         
-
-         - 설치된 Java8 jenv 관리 항목에 추가 -> jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/
-         - 설치된 다른버전 java jenv 관리 항목에 추가 -> jenv add /Library/Java/JavaVirtualMachines/openjdk-12.jdk/Contents/Home/
-       3.3.6 설치된 Java8 전역&로컬 버전 설정
-         - jenv global oracle64-1.8.0.202
-         - jenv 설정 확인 -> jenv version
-
-	0.	 VSCODE 프로그램 설치
-    - https://code.visualstudio.com/
-    - 설치완료 후 프로그램 에서 cmd+shift+p 실행
-    - 셸 명령: PATH에 ‘code’ 명령 설치 선택 실행  
-
-
-	0.	React Native 설치
-     5.1 가이드 
-       - https://facebook.github.io/react-native/docs/getting-started
-       - React Native CLI Quickstart 참고
-       - PC MAC -> developmentOS : macOS / Target OS : IOS, AOS 모두 가이드별 설치
-       - PC Windows ->  developmentOS : Windows / Target OS : AOS 가이드 설치 (IOS 지원안됨)    
-     5.2 필수 설치
-       5.2.1 node, watchman, yarn 설치
-         - brew install node
-         - brew install watchman
-         - brew install yarn
-       5.2.2 React native CLI 설치
-         - npm install -g react-native-cli
-
-	0.	Xcode  (MacOS 만 가능)
-    - Xcode 환경설정 : https://facebook.github.io/react-native/docs/getting-started#command-line-tools
-
-	0.	Android 설치
-    7.1 Android Studio 설치 : https://facebook.github.io/react-native/docs/getting-started#1-install-android-studio
-      - Android studio 설치 단계 Install Type은 반드시 Custom으로 선택 해야 됨. (Standard 선택 시 스튜디오 완전 삭제후 재 설치 필요)
-
-    7.2 Android SDK 설치 : https://facebook.github.io/react-native/docs/getting-started#2-install-the-android-sdk
-    7.3 ANDROID_HOME 환경변수 구성 : https://facebook.github.io/react-native/docs/getting-started#3-configure-the-android-home-environment-variable
- 
-	0.	프로젝트 다운로드 (Mac OS gitlab 계정 필요)   
-    - maf client 다운로드 : https://gitlab.com/nullvana/maf-cli#installation / npm i -g git+https://gitlab+deploy-token-51357:WQcTK6oy7-6a1AymSw_c@gitlab.com/nullvana/maf-cli
-
-    - maf client 전역 선언 : /usr/local/lib/node_modules/maf-cli>npm i -g .
-
-    - maf client 실행 : /usr/local/lib/node_modules/maf-cli>nam run tsc
-
-    - vscode로 소스 보기 : $HOME/work/maf-starter-default>code .
-
-    - vscode에서 터미널 실행 : ctrl +` 
-    - package.json 파일 내 명시된 Node.js 모듈 설치 : /usr/local/lib/node_modules/maf-cli>npm i
-    - 설치된 Node.js 모듈 전역설정으로 설치 :/usr/local/lib/node_modules/maf-cli>npm i -g
-
-    - maf-starter-default 설치 : $HOME/work>maf init
-    - app 이름 입력
-
-
-	0.	프로젝트 실행
-    8.1 IOS : $HOME/work/maf-starter-default>yarn iOS
-    8.2 AOS 
-      - 안드로이드 스튜디오 실행 가상 디바이스 실행
-
-      - $HOME/work/maf-starter-default>yarn android
-
-
-##release. ## keystone 필요
- > yarn run android:release
-
-Macintosh HD⁩ ▸ ⁨사용자⁩ ▸ ⁨stlee⁩ ▸ ⁨work⁩ ▸ ⁨maf-starter-default⁩ ▸ ⁨android⁩ ▸ ⁨app⁩ ▸ ⁨build⁩ ▸ ⁨outputs ▸ app ▸ ⁩release ▸ app-release.apk
-
-
-## Generating Signed APK (keystone)
-https://facebook.github.io/react-native/docs/signed-apk-android
-
-# VSCode 확장 프로그램
-ESLint - Dirk Baeumer
-GitLens - Eric Amodio
-TsLint - Microsoft
-Prettier - Code from - Esben Petersen
-Flow language support
-@builtin TypeScript and JavaScript - 사용 안 함
-
+<span class="token keyword">class</span> <span class="token class-name">CustomMapView</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>View<span class="token operator">></span>
+        <span class="token operator">&lt;</span>MapViewComponent <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Text<span class="token operator">></span>
+          MapViewComponent could use native Swift<span class="token punctuation">,</span> Java<span class="token punctuation">,</span> or Objective<span class="token operator">-</span><span class="token constant">C</span> <span class="token operator">-</span>
+          the product development process is the same<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</span></div></div></div></div></div><div class="home-showcase-section"><h2>Who&#x27;s using React Native?</h2><p>Thousands of apps are using React Native, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished with React Native, <a href="/react-native/showcase">check out these apps</a>!</p><div class="logos"><div><div class="showcase"><a href="https://code.facebook.com/posts/895897210527114/dive-into-react-native-performance/"><img src="/react-native/img/showcase/facebook.png" alt="Facebook"/></a></div><div class="showcase"><a href="https://code.facebook.com/posts/1189117404435352/react-native-for-android-how-we-built-the-first-cross-platform-react-native-app/"><img src="/react-native/img/showcase/adsmanager.png" alt="Facebook Ads Manager"/></a></div><div class="showcase"><a><img src="/react-native/img/showcase/fba.png" alt="Facebook Analytics"/></a></div><div class="showcase"><a href="https://engineering.instagram.com/react-native-at-instagram-dd828a9a90c7#.3h4wir4zr"><img src="/react-native/img/showcase/instagram.png" alt="Instagram"/></a></div><div class="showcase"><a href="http://makeitopen.com/docs/en/1-1-planning.html"><img src="/react-native/img/showcase/f8.png" alt="F8"/></a></div><div class="showcase"><a href="https://www.techatbloomberg.com/blog/bloomberg-used-react-native-develop-new-consumer-app/"><img src="/react-native/img/showcase/bloomberg.png" alt="Bloomberg"/></a></div><div class="showcase"><a href="https://medium.com/@Pinterest_Engineering/supporting-react-native-at-pinterest-f8c2233f90e6"><img src="/react-native/img/showcase/pinterest.png" alt="Pinterest"/></a></div><div class="showcase"><a><img src="/react-native/img/showcase/skype.png" alt="Skype"/></a></div><div class="showcase"><a><img src="/react-native/img/showcase/tesla.png" alt="Tesla"/></a></div><div class="showcase"><a href="https://eng.uber.com/ubereats-react-native/"><img src="/react-native/img/showcase/uber.png" alt="Uber"/></a></div><div class="showcase"><a href=" https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560#.ueonqqloc"><img src="/react-native/img/showcase/walmart.png" alt="Walmart"/></a></div><div class="showcase"><a href="https://www.wix.com/wix-lp/wix-app"><img src="/react-native/img/showcase/wix.png" alt="Wix.com"/></a></div></div></div></div><div class="hero"><div><a class="big-button" href="/react-native/docs/getting-started" target="_self">Get Started</a><a class="big-button" href="/react-native/docs/tutorial" target="_self">Learn the Basics</a></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/react-native/" class="nav-home"><img src="/react-native/img/header_logo.png" alt="React Native" width="66" height="58"/></a><div><h5><a href="/react-native/docs/getting-started.html">Docs</a></h5><a href="/react-native/docs/getting-started.html">Getting Started</a><a href="/react-native/docs/tutorial.html">Tutorial</a><a href="/react-native/docs/components-and-apis.html">Components and APIs</a><a href="/react-native/docs/more-resources.html">More Resources</a></div><div><h5>Community</h5><a href="/react-native/help.html">Community Resources</a><a href="/react-native/showcase.html">Who&#x27;s using React Native?</a><a href="http://stackoverflow.com/questions/tagged/react-native" target="_blank">Stack Overflow</a><a href="https://discord.gg/0ZcbPKXt5bZjGY5n">Reactiflux Chat</a></div><div><h5>More</h5><a href="/react-native/blog/">Blog</a><a href="https://twitter.com/reactnative" target="_blank">Twitter</a><a href="https://github.com/facebook/react-native" target="_blank">GitHub</a><a href="http://reactjs.org" target="_blank">React</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource"><img src="/react-native/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Facebook Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1677033832619985',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c98749b4a1e588efec53b2acec13025',
+                indexName: 'react-native-versions',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["tags:0.59"],"hitsPerPage":5}
+              });
+            </script></body></html>
